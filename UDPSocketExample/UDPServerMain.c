@@ -3,7 +3,7 @@
 
 #include "UDPServer.h"
 
-#define MAX_BUF_SIZE
+#define MAX_BUF_SIZE 100
 
 int main()
 {

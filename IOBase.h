@@ -4,6 +4,6 @@
 
 struct IOBase
 {
-    void (*WriteData)(struct IOBase *, char *, size_t);
-    void (*ReadData)(struct IOBase *, char *, size_t);
+    void (*WriteData)(struct IOBase *ioBase, char *data, size_t len);
+    void (*ReadData)(struct IOBase *ioBase, char *data, size_t len);
 };
