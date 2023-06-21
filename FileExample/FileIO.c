@@ -28,7 +28,7 @@ struct IOBase *CreateFileIO(char *pathname, char *mode)
 
     if (fptr == NULL)
     {
-        perror("File IO");
+        perror("File");
         return NULL;
     }
 

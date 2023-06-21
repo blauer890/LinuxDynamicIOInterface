@@ -12,7 +12,7 @@ static void UDPServer_WriteData(struct IOBase *ioBase, char *data, size_t len)
                        sizeof(udpServer->clientaddr));
     if (n < 0)
     {
-        perror("UDP Server");
+        perror("UDP server");
     }
 }
 
@@ -24,7 +24,7 @@ static void UDPServer_ReadData(struct IOBase *ioBase, char *data, size_t len)
                          (struct sockaddr *)&udpServer->clientaddr, &socklen);
     if (n < 0)
     {
-        perror("UDP Server");
+        perror("UDP server");
     }
     data[n] = '\0';
 }

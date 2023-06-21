@@ -17,7 +17,7 @@ static void UDPClient_WriteData(struct IOBase *ioBase, char *data, size_t len)
                        sizeof(udpClient->servaddr));
     if (n < 0)
     {
-        perror("UDP socket");
+        perror("UDP client");
     }
 }
 
@@ -30,7 +30,7 @@ static void UDPClient_ReadData(struct IOBase *ioBase, char *data, size_t len)
                          &socklen);
     if (n < 0)
     {
-        perror("UDP socket");
+        perror("UDP client");
     }
     data[n] = '\0';
 }
@@ -50,7 +50,7 @@ struct IOBase *CreateUDPClient(char *serverIP, int serverPort)
     int sock = socket(AF_INET, SOCK_DGRAM, 0);
     if (sock < 0)
     {
-        perror("UDP socket");
+        perror("UDP client");
         free(udpClient);
         return NULL;
     }
