@@ -5,7 +5,7 @@
 
 #define MAX_BUF_SIZE 100
 
-int main(int argc, char *argv[])
+int main()
 {
     char outBuf[MAX_BUF_SIZE];
     char inBuf[MAX_BUF_SIZE];

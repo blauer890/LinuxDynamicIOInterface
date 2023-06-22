@@ -49,6 +49,7 @@ struct IOBase *CreateNamedPipeIO(char *filename, mode_t mode)
     namedPipeIO->vtable = namedPipeIOvtable;
     namedPipeIO->filename = filename;
     namedPipeIO->mode = mode;
+    return (struct IOBase *)namedPipeIO;
 }
 
 void DestroyNamedPipeIO(struct IOBase *ioBase)
